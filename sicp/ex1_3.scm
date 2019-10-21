@@ -1,0 +1,6 @@
+(define (sum-of-squares a b)
+    (+ (* a a) (* b b))
+)
+(define (largest-sum-of-squares x y z)
+    (sum-of-squares x y)
+)

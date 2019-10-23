@@ -1,6 +1,15 @@
+(define (^ x) (* x x))
+
 (define (sum-of-squares a b)
-    (+ (* a a) (* b b))
+    (+ (^ a) (^ b))
 )
-(define (largest-sum-of-squares x y z)
-    (sum-of-squares x y)
+
+(define (largest-sum-of-squares a b c)
+    (cond
+        ((and (>= a c) (>= b c)) (sum-of-squares a b))
+        ((and (>= b a) (>= c a)) (sum-of-squares b c))
+        (else (sum-of-squares a c))
+    )
 )
+
+(largest-sum-of-squares 2 3 2)
